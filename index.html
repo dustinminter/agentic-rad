@@ -77,19 +77,21 @@ body{font-family:var(--font-body);color:var(--txt);background:#06080B;font-size:
 .pub-tile .pt{color:var(--sf-blue);}
 .src-tile .ss,.pub-tile .ps{font-size:10px;color:var(--txt-3);margin-top:1px;}
 
-.chevron{flex:0 0 26px;display:flex;align-items:center;justify-content:center;}
-.chevron .ico{width:21px;height:21px;color:var(--orange);stroke-width:2.6;}
+.chevron{flex:0 0 18px;display:flex;align-items:center;justify-content:center;}
+.chevron .ico{width:17px;height:17px;color:var(--orange);stroke-width:2.6;}
 
 /* boundary */
 .boundary{flex:1;min-width:0;border:2px solid var(--sf-blue);border-radius:10px;padding:11px;position:relative;display:flex;flex-direction:column;background:var(--boundary);box-shadow:0 0 0 1px rgba(41,181,232,0.15) inset;}
 .boundary .bug-wm{position:absolute;right:13px;top:12px;width:24px;height:24px;opacity:0.9;}
-.boundary .blabel{font-family:var(--font-display);font-size:12.5px;font-weight:600;color:var(--sf-blue);margin-bottom:9px;padding-right:46px;display:flex;align-items:center;gap:6px;}
+.boundary .blabel{font-family:var(--font-display);font-size:12.5px;font-weight:600;color:var(--sf-blue);margin-bottom:9px;padding-right:30px;display:flex;align-items:center;flex-wrap:wrap;gap:6px;row-gap:1px;}
+.bl-title{white-space:nowrap;}
+.bl-sub{font-family:var(--font-display);font-weight:400;color:var(--txt-3);font-size:10px;flex-basis:100%;}
 .zone{border-radius:7px;padding:11px 12px;margin-bottom:9px;display:flex;flex-direction:column;min-width:0;}
 .zone:last-child{margin-bottom:0;}
 .zone .zt{font-family:var(--font-display);font-size:11.5px;font-weight:600;margin-bottom:8px;display:flex;align-items:center;flex-wrap:wrap;gap:6px;row-gap:6px;}
 .zone .zt .ico{width:17px;height:17px;}
 .zt-txt{flex:1 1 auto;min-width:0;}
-.z-agent{background:var(--sf-blue);box-shadow:0 0 18px rgba(41,181,232,0.25);}.z-agent .zt{color:var(--sf-ink);flex-wrap:nowrap;margin-bottom:3px;}.z-agent .zt .ico{color:var(--sf-ink);}
+.z-agent{background:var(--sf-blue);box-shadow:0 0 18px rgba(41,181,232,0.25);}.z-agent .zt{color:var(--sf-ink);flex-wrap:nowrap;margin-bottom:7px;}.z-agent .zt .ico{color:var(--sf-ink);}
 .zt-sub{font-family:var(--font-body);font-size:10.5px;font-weight:400;color:var(--sf-ink);opacity:0.85;margin:0 0 10px 47px;}
 .z-tools{background:var(--surf-1);border:1px solid rgba(41,181,232,0.55);}.z-tools .zt{color:var(--sf-blue);}
 .z-data{background:var(--surf-1);border:1px solid rgba(70,198,245,0.4);}.z-data .zt{color:var(--cyan);}
@@ -97,13 +99,16 @@ body{font-family:var(--font-body);color:var(--txt);background:#06080B;font-size:
 .bx{flex:1;min-width:0;background:var(--surf-2);border:1px solid rgba(41,181,232,0.4);border-radius:7px;padding:11px 8px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;}
 .bx .ico{width:25px;height:25px;color:var(--sf-blue);margin-bottom:7px;}
 .bx .bxt{font-size:11px;font-weight:600;color:#E4EEF6;}
+.z-data .bx .bxt{font-size:10px;}
 .bx .bxs{font-size:9.5px;color:var(--txt-3);margin-top:2px;}
 .z-agent .bx{background:var(--white);border-color:rgba(255,255,255,0.7);}
 .z-agent .bx .ico{color:var(--sf-blue-d);}.z-agent .bx .bxt{color:var(--sf-ink);}.z-agent .bx .bxs{color:var(--sf-blue-d);}
 .z-data .bx .ico{color:var(--cyan);}
 .arrow{align-self:center;flex:0 0 20px;display:flex;align-items:center;justify-content:center;}
 .arrow .ico{width:18px;height:18px;color:var(--sf-blue);stroke-width:2.4;}
-.flowtag{font-size:9.5px;color:var(--white);background:var(--sf-ink);border-radius:9px;padding:3px 11px;margin-left:auto;flex:none;white-space:nowrap;border:1px solid rgba(255,255,255,0.28);}
+.z-data .arrow{flex:0 0 14px;}
+.z-data .arrow .ico{width:14px;height:14px;}
+.flowtag{font-size:9px;color:var(--white);background:var(--sf-ink);border-radius:9px;padding:3px 9px;margin-left:auto;flex:none;white-space:nowrap;border:1px solid rgba(255,255,255,0.28);}
 
 /* gate */
 .gate{flex:0 0 16%;display:flex;flex-direction:column;}
@@ -280,7 +285,7 @@ body{font-family:var(--font-body);color:var(--txt);background:#06080B;font-size:
         <!-- BOUNDARY -->
         <div class="boundary dots-light">
           <svg class="bug-wm" viewBox="0 0 146.36 139.16" aria-hidden="true"><path fill="#29b5e8" d="M134.81,60.1l-16.47,9.49L134.81,79a8.65,8.65,0,1,1-8.67,15l-29.51-17a8.68,8.68,0,0,1-4.33-7.75,8.48,8.48,0,0,1,.31-2,8.68,8.68,0,0,1,4-5.19l29.51-16.94A8.69,8.69,0,0,1,138,48.31,8.58,8.58,0,0,1,134.81,60.1Zm-15.59,46L89.72,89.13a8.72,8.72,0,0,0-13.06,7.48v33.9a8.69,8.69,0,0,0,17.37,0v-19L110.54,121a8.66,8.66,0,1,0,8.68-15Zm-34-33.16L72.92,85.09a2.44,2.44,0,0,1-1.54.65H67.77a2.51,2.51,0,0,1-1.54-.65L54,72.9a2.45,2.45,0,0,1-.64-1.52v-3.6A2.5,2.5,0,0,1,54,66.25L66.23,54.06a2.5,2.5,0,0,1,1.54-.64h3.61a2.45,2.45,0,0,1,1.54.64L85.18,66.25a2.49,2.49,0,0,1,.63,1.53v3.6A2.44,2.44,0,0,1,85.18,72.9Zm-9.8-3.38A2.59,2.59,0,0,0,74.73,68l-3.55-3.51a2.51,2.51,0,0,0-1.54-.64h-.13a2.46,2.46,0,0,0-1.53.64L64.43,68a2.51,2.51,0,0,0-.63,1.55v.13a2.41,2.41,0,0,0,.63,1.52L68,74.7a2.48,2.48,0,0,0,1.53.64h.13a2.51,2.51,0,0,0,1.54-.64l3.55-3.53a2.49,2.49,0,0,0,.65-1.52ZM19.93,33.08,49.44,50a8.73,8.73,0,0,0,13.07-7.49V8.64a8.69,8.69,0,0,0-17.37,0v19l-16.53-9.5a8.65,8.65,0,1,0-8.68,15ZM84.69,51.16a8.64,8.64,0,0,0,5-1.13l29.5-17a8.65,8.65,0,1,0-8.68-15L94,27.61v-19a8.69,8.69,0,0,0-17.37,0v33.9A8.66,8.66,0,0,0,84.69,51.16ZM54.48,88a8.58,8.58,0,0,0-5,1.13L19.93,106.06a8.66,8.66,0,1,0,8.68,15l16.53-9.49v19a8.69,8.69,0,0,0,17.37,0V96.61A8.65,8.65,0,0,0,54.48,88Zm-8-15.87a8.61,8.61,0,0,0-4-10L13,45.14A8.69,8.69,0,0,0,1.17,48.31,8.59,8.59,0,0,0,4.35,60.1l16.47,9.49L4.35,79A8.65,8.65,0,1,0,13,94l29.48-17A8.59,8.59,0,0,0,46.47,72.13Z"/></svg>
-          <div class="blabel"><span class="num">3</span> Snowflake Agentic Control Plane <span style="font-weight:400;color:var(--txt-3);font-size:10px;">(account boundary)</span></div>
+          <div class="blabel"><span class="num">3</span><span class="bl-title">Snowflake Agentic Control Plane</span><span class="bl-sub">(account boundary)</span></div>
 
           <div class="zone z-agent">
             <div class="zt"><span class="num">5</span><svg class="ico"><use href="#ic-agent"/></svg><span class="zt-txt">The Agent</span><span class="flowtag">Plan &#8594; Tool-call &#8594; Respond</span></div>
