@@ -1,0 +1,12 @@
+{
+  "name": "agentic-rad",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Agentic AI Control Plane reference architecture diagram (Archetype + Snowflake)",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0"
+  }
+}
