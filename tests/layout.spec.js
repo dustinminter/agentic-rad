@@ -5,6 +5,10 @@ const { test, expect } = require('@playwright/test');
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/index.html', { waitUntil: 'networkidle' });
+  // Neutralize the responsive fit-to-width zoom so these tests measure the
+  // intrinsic design-width (1056px) layout deterministically. The responsive
+  // scaling behavior itself is covered in responsive.spec.js.
+  await page.addStyleTag({ content: '.page{zoom:1 !important}' });
 });
 
 test('content does not overflow the 11in page box', async ({ page }) => {
